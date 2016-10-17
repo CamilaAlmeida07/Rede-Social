@@ -1,0 +1,6 @@
+- Feed
+- Meu Perfil
+- Páginas
+- Eventos
+- Duelos
+- Ranking

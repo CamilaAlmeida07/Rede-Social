@@ -1,0 +1,182 @@
+body{
+	padding:0px;
+	margin:0px;
+	position:relative;
+	font-family: "Verdana";
+	font-size:15px;
+}
+
+#cabecalho{
+	background:#2F4F4F;
+	height:70px;
+	width:100%;
+}
+	
+	#logo{
+		width: 60px;
+		height: 60px;
+		top:5px;
+		left: 10px;
+		float:left;
+		position:relative;
+		background-image: url(../img/music.png);
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	#busca{
+		height:100%;
+		width: calc(100% - 220px);
+		float: right;
+	}
+	#busca>input{
+		height:25px;
+		width:250px;
+		top:22px;
+		position:relative;
+		border:none;
+		border-bottom:2px solid #79BBAE;
+		background: #2F4F4F;	
+		margin-left:50px;
+		padding-left:5px;
+		
+		transition: border-bottom 1s;
+		color:white;
+	}
+	#busca>input:focus{
+		border:none;
+		border-bottom:2px solid white;
+		outline: 0;
+	}
+
+#conteudo{
+	height: calc(100% - 70px);
+	width:100%;	
+}
+
+	#menu{	
+		background-color:#1C1C1C;		
+		text-align:center;
+		height:100%;
+		width:70px;
+		float:left;
+		transition: width 1s;
+		position: absolute;
+		z-index:1;
+	}
+	#menu:hover{	
+		width:220px;		
+	}
+	
+		#foto{
+			height: 25px;
+			width:96%;
+			left:2%;
+			position:relative;
+			margin-top:5px;
+			padding:0px;
+		}
+		#foto>img{
+			background-image: url(../img/perfil.png);
+		    background-position: center;
+		    background-size: 130%;
+			height: 30px;
+			width: 30px;
+			position:relative;
+			border-radius:20%;
+			float:left;
+			margin-left:10px;
+		}
+		
+		#nav{
+			padding:0px;
+			margin:0px;
+			margin-top:10px;
+			list-style:none;
+			
+		}
+		#nav li{
+			border-bottom:1px solid black;
+			height:37px;			
+		}
+		#nav li:nth-child(1){
+			border-top:1px solid black;
+		}
+		#nav li>a{
+			text-decoration: none;
+			color:white;
+			padding-top:9px;
+			height:calc(100% - 9px);
+			width:100%;
+			display:block;
+			
+			transition: background 1s;
+		}
+		#nav li>a:hover{
+			background:#2F4F4F;
+		}
+		.selected{
+			background:#1C1C1C;
+		}
+	
+	
+	#dados{
+		background-color:#E9E5E5;
+		height:100%;
+		width:calc(100% - 70px);
+		top:0px;
+		float:right;
+		padding-bottom: 20px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+		.post{
+			width:96%;
+			left:calc(2% - 5px);
+			position:relative;
+			margin-top:20px;
+			overflow:hidden;
+			border-radius: 5px;
+			background-color: white;
+   			box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.32);
+   			padding:5px;
+		}
+			.user{
+				background-image: url('../img/perfil.png');
+				background-position:center;
+		 	    background-size: 145%;
+				height:50px;
+				width:50px;
+				margin:5px;
+				background-color:#1C1C1C;
+				border-radius: 7px;
+			}
+			.postagem{
+				min-height:70px;
+				width:calc(100% - 75px);
+				float:right;
+				margin:5px;
+				margin-left:0px;
+			}	
+			.comentario{
+				width:calc(100% - 75px);
+				float:right;
+				margin:5px;
+				margin-left:0px;
+	   			box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.32);
+				border-radius: 4px;
+			}
+
+			.comentarioImpar{
+				background-color:#E9E5E5;
+			}
+			.comentarioPar{
+				background-color:white;
+			}
+
+#rodape{
+	background-color:#2F4F4F;
+	height:50px;
+	width:100%;
+}
