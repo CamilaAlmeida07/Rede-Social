@@ -1,0 +1,255 @@
+body{
+	padding:0px;
+	margin:0px;
+	position:relative;
+	font-family: "Verdana";
+	font-size:15px;
+}
+
+
+
+nav {
+	background: Teal;
+	position:fixed;
+	top:0;
+	bottom:0;
+	height:100%;
+	left:0;
+	width:55px;
+	overflow:hidden;
+	z-index:1;
+	transition:width .5s linear;
+
+   	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.32);
+
+}
+
+nav:hover, nav.expanded {
+	width:180px;
+	overflow:hidden;
+}
+nav:hover #conteudo {
+	background: r
+}
+
+
+
+/*ESTILOS DOS ITENS DO MENU*/
+nav ul{
+	padding:0px;
+	margin:0px;
+	/*margin-top:75px;*/
+	list-style:none;
+	top:0px;
+}
+
+nav li{
+	border-bottom:1px solid CadetBlue;
+	height:37px;
+}
+
+nav li:nth-child(1){
+	height:75px; 
+}
+nav li:nth-child(2){
+	border-top:1px solid CadetBlue;
+}
+nav li:hover>a{
+	background-color:CadetBlue;
+}
+
+nav li>a {
+	position:relative;
+	width:255px;
+	display:table;
+	border-collapse:collapse;
+	border-spacing:0;
+	font-family: 'Strait', sans-serif;
+	text-decoration: none;
+	color:white;
+	height:calc(100%);	
+	text-align: left;
+	transition:all .5s linear;
+}
+
+.selected{
+	background-color: DarkSlateGray;
+}
+
+
+.iconMenu {
+	height: 30px;
+	width: 30px;
+	position:relative;
+	border-radius:20%;
+	float:left;
+	margin-left:12px;
+	margin-top:4px;
+	background-position: center;
+	background-size: 100%;		
+}
+	#menuLogo{
+		height:40px; 
+		width: 40px;
+		background: url('../img/musicWhite.png');
+		background-repeat: no-repeat;
+		background-size: 44px;
+
+		margin-top:16px;
+		margin-left:4px;
+	}
+	#menuUser{
+		background-image: url(../img/perfil.png);
+	}
+	#menuFeed{
+		background-image: url(../img/feedWhite.png);
+	}
+	#menuPaginas{
+		background-image: url(../img/guitarWhite.png);
+	}
+	#menuDuelos{
+		background-image: url(../img/swordWhite.png);
+	}
+	#menuRanking{
+		background-image: url(../img/teste.png);
+	}
+	#menuMedalhas{
+		background-image: url(../img/medalWhite.png);
+	}
+	#menuSair{
+		background-image: url(../img/exitWhite.png);
+	}
+.textMenu  {
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	width:190px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+
+	/*#busca{
+		height:100%;
+		width: calc(100% - 220px);
+		float: right;
+	}
+	#busca>input{
+		height:25px;
+		width:250px;
+		top:22px;
+		position:relative;
+		border:none;
+		border-bottom:2px solid #79BBAE;
+		background: #2F4F4F;	
+		margin-left:50px;
+		padding-left:5px;
+		
+		transition: border-bottom 1s;
+		color:white;
+	}
+	#busca>input:focus{
+		border:none;
+		border-bottom:2px solid white;
+		outline: 0;
+	}*/
+
+#conteudo{
+	overflow: hidden;
+	background-color:#F4F1F1;
+	height: 100%;
+	position: relative;
+	width:calc(100% - 58px);
+	top:0px;
+	float:right;
+	overflow-y: scroll;
+}
+	
+	
+	#operacoes{			
+		margin: 1%;
+		margin-bottom: 0;
+		position:relative;		
+		text-align: left;
+	}
+		#operacoes div{
+			margin: 1%;
+			margin-left: 0;
+			margin-top: 0;
+			display: inline-block;
+			min-width: 120px;
+			height: 40px;
+			position:relative;
+			overflow:hidden;
+			border-radius: 5px;
+   			box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.32);
+   			padding:5px;
+   			cursor: pointer;
+
+   			background-color: Teal ;
+			color:white;
+			text-align: center;
+			vertical-align: text-bottom;
+   			transition: all 1s, color .70s;
+		}
+		#operacoes div:hover{
+			box-shadow: none;
+   			background-color: CadetBlue;
+		}
+			#operacoes div span{
+				top:9px;
+				position: relative;
+			}
+
+	.post{
+		margin: 1%;
+		margin-top:0px;
+		position:relative;
+		overflow:hidden;
+		border-radius: 5px;
+		box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.32);
+		padding:5px;
+		background: #FBF7F7;
+	}
+		.user{
+			background-image: url('../img/perfil.png');
+			background-position:center;
+	 	    background-size: 145%;
+			height:50px;
+			width:50px;
+			margin:5px;
+			background-color:#1C1C1C;
+			border-radius: 7px;
+		}
+		.postagem{
+			min-height:70px;
+			width:calc(100% - 75px);
+			float:right;
+			margin:5px;
+			margin-left:0px;
+		}	
+		.avaliacao{
+			background-image: url('../img/perfil.png');
+			background-position:center;
+	 	    background-size: 145%;
+			height:20px;
+			width:20px;
+			margin:5px;
+			background-color:#1C1C1C;
+			border-radius: 7px;
+			border:1px solid black;
+		}
+		.comentario{
+			width:calc(100% - 75px);
+			float:right;
+			margin:5px;
+			margin-left:0px;
+   			box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.32);
+			border-radius: 4px;
+		}
+
+		.comentarioImpar{
+			background-color:#F4F1F1;
+		}
+		.comentarioPar{
+			background-color:#FBF7F7;
+		}

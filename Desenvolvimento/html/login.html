@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Login</title>
+	    <link rel="stylesheet" type="text/css" href="../css/login.css">
+			<script type='text/javascript' src='../js/jquery.min.js'></script>
+			<script type='text/javascript' src='../js/sweetalert2.min.js'></script>
+	    <script type="text/javascript" src="../js/login.js"></script>
+	</head>
+
+	<body>
+	    <form id='frmLogin' class='centralizar vertical' method='Post' action='home.html' onsubmit='return validarCamposLogin()'>
+
+			<div id="entradas">
+				<div class="campo">
+					<input type="text" name="id" id="id" placeholder="Login">
+				</div>
+				<div class="campo">
+					<input type="password" name="senha" id="senha" placeholder="Senha">
+				</div>
+			</div>
+
+			<div id='botoes'>
+				<input class='botao' type='button' value='Cancelar' name='cancelar' id='cancelar' onclick="window.location='home.html'">
+				<input class='botao' type='submit' value='Entrar' name='entrar' id='entrar'>
+			</div>
+			<img id='logo'>
+	    </form>
+
+	</body>
+</html>

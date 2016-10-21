@@ -1,16 +1,15 @@
 $(document).ready(function(){
 
-	var flag = false;
 
-	$("#menu").hover(function(){
-		$("#nav li>a>p").delay(800).css('visibility', 'visible');
-		flag = true;
-	});
-	$("#menu").mouseout(function(){
-		$('#nav li>a>p').delay(800).css('visibility', 'hidden');
-	});
+	// $("nav").hover(function(){
+	// 	$("#conteudo").delay(5000).css('opacity', '.2');
 	
-	$('#nav li>a').click(function(){
+	// });
+	// $("nav").mouseout(function(){
+	// 	$("#conteudo").delay(1000).css('opacity', '1');
+	// });
+	
+	$('nav li>a').click(function(){
 		$('.selected').removeClass('selected');
 		$(this).addClass('selected');
 	});
