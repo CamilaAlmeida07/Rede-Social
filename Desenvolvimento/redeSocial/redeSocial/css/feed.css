@@ -1,0 +1,93 @@
+
+	#operacoesFeed{			
+		margin: 1%;
+		margin-bottom: 0;
+		position:relative;		
+		text-align: left;
+	}
+		#operacoesFeed div{
+			margin: 1%;
+			margin-left: 0;
+			margin-top: 0;
+			display: inline-block;
+			min-width: 120px;
+			height: 40px;
+			position:relative;
+			overflow:hidden;
+			border-radius: 5px;
+   			box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.32);
+   			padding:5px;
+   			cursor: pointer;
+
+   			background-color:  #00625F ;
+			color:white;
+			text-align: center;
+			vertical-align: text-bottom;
+   			transition: all 1s, color .70s;
+		}
+		#operacoesFeed div:hover{
+			box-shadow: none;
+   			background-color: CadetBlue;
+		}
+			#operacoesFeed div span{
+				top:9px;
+				position: relative;
+			}
+
+    #conteudoFeed {
+        color:black;
+        text-align:left;
+    }
+	#conteudoFeed .post{
+		margin: 1%;
+		margin-top:0px;
+		position:relative;
+		overflow:hidden;
+		border-radius: 5px;
+		box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.32);
+		padding:5px;
+		background: #FBF7F7;
+	}
+		#conteudoFeed .user{
+			background-image: url('../img/perfil.png');
+			background-position:center;
+	 	    background-size: 145%;
+			height:50px;
+			width:50px;
+			margin:5px;
+			background-color:#1C1C1C;
+			border-radius: 7px;
+		}
+		#conteudoFeed .postagem{
+			min-height:70px;
+			width:calc(100% - 75px);
+			float:right;
+			margin:5px;
+			margin-left:0px;
+		}	
+		#conteudoFeed .avaliacao{
+			background-image: url('../img/perfil.png');
+			background-position:center;
+	 	    background-size: 145%;
+			height:20px;
+			width:20px;
+			margin:5px;
+			background-color:#1C1C1C;
+			border-radius: 7px;
+			border:1px solid black;
+		}
+		#conteudoFeed .comentario{
+			width:calc(100% - 75px);
+			float:right;
+			margin:5px;
+			margin-left:0px;
+   			box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.32);
+			border-radius: 4px;
+		}
+
+		#conteudoFeed .comentarioImpar{
+			background-color:#F4F1F1;
+		}
+		#conteudoFeed .comentarioPar{
+			background-color:#FBF7F7;
+		}

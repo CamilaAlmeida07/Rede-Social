@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Muzek - @ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/css/css")
+      @*  @Scripts.Render("~/bundles/modernizr")*@
+    </head>
+    <body>
+
+        <nav class="main-menu">  
+			<div><a class="logo" href="#"></a></div> 
+			<div class="settings"></div>            
+	    	<ul>
+		      	<li><a href="#"><i class="iconMenu" id='menuLogo'></i><span class="textMenu">MUZEK</span></a></li> 
+		      	<li><a href="#"><i class="iconMenu" id='menuUser'></i><span class="textMenu">User name</span></a></li>  
+		      	<li><a href="#" class='selected'><i class="iconMenu" id='menuFeed'></i><span class="textMenu">Feed</span></a></li> 	
+		      @*  <li><a href="#"><i class="iconMenu" id='menuPaginas'></i><span class="textMenu">Páginas</span></a></li>*@
+		        <li><a href="#"><i class="iconMenu" id='menuDuelos'></i><span class="textMenu">Duelos</span></a></li>
+		        <li><a href="#"><i class="iconMenu" id='menuRanking'></i><span class="textMenu">Ranking</span></a></li>  
+		        <li><a href="#"><i class="iconMenu" id='menuMedalhas'></i><span class="textMenu">Conquistas</span></a></li>  
+		        <li><a href="#"><i class="iconMenu" id='menuSair'></i><span class="textMenu">Sair</span></a></li>  
+	    	
+                <li>@Html.ActionLink("User Name", "perfil", "Home")</li>
+                <li>@Html.ActionLink("Feed", "home", "Home")</li>
+              @*  <li>@Html.ActionLink("Páginas", "paginas", "Home")</li>*@
+                <li>@Html.ActionLink("Duelos", "duelos", "Home")</li>
+                <li>@Html.ActionLink("Ranking", "ranking", "Home")</li>
+                <li>@Html.ActionLink("Conquistas", "conquistas", "Home")</li>
+            </ul>    
+	    </nav> 			
+
+
+        <div id="conteudo">
+            @*@RenderSection("featured", required: false)*@
+            @RenderBody()
+        </div>
+
+
+
+
+      @*  <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>*@
+
+        @*@Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)*@
+    </body>
+</html>
