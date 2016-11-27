@@ -1,0 +1,46 @@
+.categoria {
+	position:relative;		
+	text-align: center;
+
+    /*overflow-y: scroll;*/
+    padding-top:10px;
+    padding-bottom:10px;
+    width:50%;
+}
+
+#Medalhas{
+    float:left;
+}
+#Trofeus {
+    float: right;
+}
+
+    .categoria div{
+		margin: 1%;
+		margin-left: 0;
+		margin-top: 0;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		position:relative;
+		overflow:hidden;
+		border-radius: 5px;
+   		box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.32);
+   		padding:5px;
+   		cursor: pointer;
+
+   		background-color: DarkSlateGray;
+		color:white;
+		text-align: center;
+		vertical-align: text-bottom;
+   		transition: all 1s, color .70s;
+	}
+	.categoria div:hover{
+		box-shadow: none;
+   		background-color: CadetBlue;
+	}
+		.categoria div span{
+			top:9px;
+			position: relative;
+		}
+

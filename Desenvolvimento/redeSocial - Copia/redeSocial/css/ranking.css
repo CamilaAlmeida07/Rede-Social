@@ -1,0 +1,53 @@
+    #operacoesRanking{         
+        margin: 1%;
+        margin-bottom: 0;
+        position:relative;      
+        text-align: left;
+    }
+        #operacoesRanking div{
+            margin: 1%;
+            margin-left: 0;
+            margin-top: 0;
+            display: inline-block;
+            min-width: 120px;
+            height: 40px;
+            position:relative;
+            overflow:hidden;
+            border-radius: 5px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.32);
+            padding:5px;
+            cursor: pointer;
+
+            background-color: #00625F ;
+            color:white;
+            text-align: center;
+            vertical-align: text-bottom;
+            transition: all 1s, color .70s;
+        }
+        #operacoesRanking div:hover{
+            box-shadow: none;
+            background-color: CadetBlue;
+        }
+            #operacoesRanking div span{
+                top:9px;
+                position: relative;
+            }
+
+
+    #conteudoRanking {
+        color:black;
+        text-align:left;
+    }
+
+        #conteudoRanking table {
+            border:1px solid black;   
+        }
+
+        #conteudoRanking table tr {
+            height:30px;  
+        }
+
+          #conteudoRanking table td {
+            width:150px;  
+            background:white; 
+        }
