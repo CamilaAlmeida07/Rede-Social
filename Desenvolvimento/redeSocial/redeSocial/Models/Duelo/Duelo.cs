@@ -27,4 +27,13 @@ namespace redeSocial.Models.Duelo
 
         public virtual ICollection<Inscricao.Inscricao> Inscricao { get; set; } //nomes da tabela com relação
     }
+
+    public class DueloUserAssociation
+    {
+        public virtual Duelo duelo { get; set; }
+        public virtual Models.Usuario.Usuario usuario { get; set; }
+        public AssociationType AssociationType { get; set; }
+    }
+
+    public enum AssociationType { Regular, Administrator }
 }

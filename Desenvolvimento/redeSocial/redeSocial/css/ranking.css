@@ -2,7 +2,7 @@
         margin: 1%;
         margin-bottom: 0;
         position:relative;      
-        text-align: left;
+        text-align: center;
     }
         #operacoesRanking div{
             margin: 1%;
@@ -36,18 +36,23 @@
 
     #conteudoRanking {
         color:black;
-        text-align:left;
+        text-align:center;
     }
 
         #conteudoRanking table {
             border:1px solid black;   
+            margin-left:50px;
+        }
+
+        #conteudoRanking table>tr {
+            background:Black; 
         }
 
         #conteudoRanking table tr {
             height:30px;  
         }
 
-          #conteudoRanking table td {
+        #conteudoRanking table td {
             width:150px;  
             background:white; 
         }

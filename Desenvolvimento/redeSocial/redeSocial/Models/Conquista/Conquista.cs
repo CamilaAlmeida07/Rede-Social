@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace redeSocial.Models.Conquistas
+namespace redeSocial.Models.Conquista
 {
     public class Conquista
     {

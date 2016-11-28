@@ -1,0 +1,41 @@
+﻿@model IEnumerable<redeSocial.Models.Duelo.Duelo>
+
+
+@{
+    ViewBag.Title = "Duelos";
+}
+
+<div id='operacoesDuelos'>
+        
+    @foreach(var item in Model){
+        
+        var status  = "None";
+
+
+        var compInicio = DateTime.Compare(@DateTime.Today, @item.Inicio);
+        var compTermino = DateTime.Compare(@DateTime.Today, @item.Termino);
+        
+        if(@compInicio < 0){
+            status = "Incrições";                    
+        }
+        else if (@compTermino > 0)
+        {
+            status = "Encerrado";      
+        }
+        else{
+            status = "Votação";  
+        }
+
+    
+        <div class='duelo'>
+            <span>@item.IdDuelo - Duelo de @item.Tipo <br><br> 
+                Criador: @item.IdCriador<br>
+                Status: @status
+            </span>
+            
+        </div>
+    }
+
+	
+	<!-- <div id='busca'><input type='text' placeholder='Buscar'></div> -->
+</div>

@@ -16,12 +16,27 @@ namespace redeSocial
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Postagem", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
                 name: "Duelo",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Duelo", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Duelo", action = "Duelo", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Ranking",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Ranking", action = "Ranking", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Conquista",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Conquista", action = "Conquista", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Sair",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Login", action = "Usuario", id = UrlParameter.Optional }
             );
 
      

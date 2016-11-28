@@ -1,10 +1,14 @@
 ﻿@model IEnumerable<redeSocial.Models.Postagem.Postagem>
+@*@model  redeSocial.Models.ViewModel*@
 
 @{
     ViewBag.Title = "Feed";
+
+    //redeSocial.Models.Usuario.UsuarioDao Usuario = Model.Usuario;
+    //redeSocial.Models.Postagem.PostagemDao Postagem = Model.Postagem;
 }
 
-<input type="submit" name="btnSubmit" value="Criar" onclick='location.href="<%:Url.Action(\"Index\", \"Home\") %>"'/>
+<input type="submit" name="btnSubmit" value="Criar" onclick='location.href="<%:Url.Action(\"CreateUser\", \"Usuario\") %>"'/>
 
 
 <div id='operacoesFeed'>
@@ -15,16 +19,37 @@
 </div>
 
 <div id="conteudoFeed">
-    
+
+ 
+     @*@Html.LabelFor(m => m.Usuario.Nome)
+     @Html.DisplayFor(m => m.Usuario.Nome)*@
+
+
+   
 @foreach(var item in Model){
     <div class='post'>
-	    <img class='user'>
+	    <img class='user'><span>@item.IdUser</span><br>
 	    <div class='postagem'>
 		    <iframe width="560" height="315" src="@item.Conteudo" frameborder="0" allowfullscreen></iframe>
-		    <div class='avaliacao' title='Afinado'></div>
+		    <div class='avaliacao' title='Afinado'></div>Afinação: @item.Curtidas
 	    </div>
     </div>
 }
+
+
+    @*   
+@foreach(var item in Model){
+    <div class='post'>
+	    <img class='user'><span>@item.Usuario.</span><br>
+	    <div class='postagem'>
+		    <iframe width="560" height="315" src="@item.Postagem.Conteudo" frameborder="0" allowfullscreen></iframe>
+		    <div class='avaliacao' title='Afinado'></div>Afinação: @item.Postagem.Curtidas
+	    </div>
+    </div>
+}*@
+
+
+
 
 @*<div class='post'>
 	<img class='user'>

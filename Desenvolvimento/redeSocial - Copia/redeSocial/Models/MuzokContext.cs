@@ -10,7 +10,7 @@ namespace redeSocial.Models
     public class MuzokContext : DbContext //proprio do entity framekwork
     {
         //CREADO OS MODELOS NO BANCO DE DADOS
-        //public DbSet<Conquistas.Conquista> Conquista { get; set; }  
+        public DbSet<Conquista.Conquista> Conquista { get; set; }  
         public DbSet<Duelo.Duelo> Duelo { get; set; }
         public DbSet<Inscricao.Inscricao> Inscricao { get; set; } 
         public DbSet<Postagem.Postagem> Postagem  { get; set; }

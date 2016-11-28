@@ -169,7 +169,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConquistaController.cs" />
     <Compile Include="Controllers\DueloController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\InscricaoController.cs" />
     <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -177,14 +177,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Conquista\Conquista.cs" />
+    <Compile Include="Models\Conquista\ConquistaDao.cs" />
     <Compile Include="Models\Duelo\Duelo.cs" />
     <Compile Include="Models\Duelo\DueloDao.cs" />
     <Compile Include="Models\Inscricao\Inscricao.cs" />
+    <Compile Include="Models\Inscricao\InscricaoDao.cs" />
     <Compile Include="Models\MuzokContext.cs" />
     <Compile Include="Models\MuzokInitializer.cs" />
     <Compile Include="Models\Postagem\Postagem.cs" />
     <Compile Include="Models\Postagem\PostagemDao.cs" />
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Models\Ranking\Ranking.cs" />
+    <Compile Include="Models\Ranking\RankingDao.cs" />
     <Compile Include="Models\Usuario\Usuario.cs" />
     <Compile Include="Models\Usuario\UsuarioDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -311,8 +315,8 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Ranking\Ranking.cshtml" />
-    <Content Include="Views\Duelo\Index.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Duelo\Duelo.cshtml" />
+    <Content Include="Views\Postagem\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -325,7 +329,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Filters\" />
-    <Folder Include="Models\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

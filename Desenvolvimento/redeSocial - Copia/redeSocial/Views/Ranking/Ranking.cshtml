@@ -1,5 +1,8 @@
-﻿@{
+﻿@model IEnumerable<redeSocial.Models.Ranking.Ranking>
+
+@{
     ViewBag.Title = "Ranking";
+    var posicao = 0;
 }
 
 <div id='operacoesRanking'>
@@ -10,7 +13,17 @@
 <div id="conteudoRanking">
     <table>
            <tr><td>Posição</td><td>Nome<td>Pontos</td><td>Vitórias</td><td>Duelos</td></tr>
-           <tr><td></td><td></td><td></td><td></td><td></td></tr>
-           <tr><td></td><td></td><td></td><td></td><td></td></tr>
+
+            @foreach (var item in Model)
+            {
+                posicao ++;
+                <tr>
+                    <td>@posicao</td>
+                    <td>@item.idUser</td>
+                    <td>@item.Pontos</td>
+                    <td>@item.Vitorias</td>
+                    <td>@item.Duelos</td>
+                </tr>
+            }
     </table>
 </div>

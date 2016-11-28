@@ -21,6 +21,8 @@ namespace redeSocial.Models.Postagem
         [Required]
         public string Conteudo { get; set; }
 
+
+
         //METÓDO DS GETS E SETS, OU SEJA, DE DEFINIÇÕES
         //OS DADOS DAQUI SÃO USADOS PARA GERAR O BANCO
 

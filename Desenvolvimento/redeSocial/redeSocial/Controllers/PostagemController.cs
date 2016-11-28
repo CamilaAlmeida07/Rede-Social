@@ -1,5 +1,6 @@
 ﻿using redeSocial.Models;
 using redeSocial.Models.Postagem;
+using redeSocial.Models.Usuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Web.Mvc;
 
 namespace redeSocial.Controllers
 {
-    public class HomeController : Controller
+    public class PostagemController : Controller
     {
         public ActionResult Index(string submit)
         {
@@ -16,12 +17,31 @@ namespace redeSocial.Controllers
 
             var postDao = new PostagemDao();
             var post = postDao.BuscarTodasPostagens();//carrega objeto com dados da classe
-            
+
             return View(post);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.
         }
 
         [HttpPost]
-        public ActionResult Criar()
+       
+
+        //public ActionResult Index()
+        //{
+
+        //    var usuarioDao = new UsuarioDao();
+        //    var usuario = usuarioDao.BuscarPorId(1);
+
+        //    var postagemDao = new PostagemDao();
+        //    var postagem = postagemDao.BuscaPorUsuario(1);
+
+
+        //    ViewModel viewModel = new ViewModel(usuario, postagem);
+
+        //    return View(viewModel);
+        //}
+
+        
+        [HttpPost]
+        public ActionResult Novo()
         {
             ViewData["btnSubmit"] = "TESTE";
             return View("Index");

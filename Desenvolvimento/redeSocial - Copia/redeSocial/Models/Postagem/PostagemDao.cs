@@ -15,11 +15,43 @@ namespace redeSocial.Models.Postagem
             {
                 post = context.Postagem.ToList();
             }
-            //var conexao = new MuzokContext(); //chamando conexao
-            //return conexao.Usuarios.ToList();//retorna em lista
-            //TO LIST É O QUE FAZ DE FATO A CONSULTA
+            
             return post;
         }
+
+        public IEnumerable<Postagem> BuscaPorUsuario(int id)
+        {
+            IEnumerable<Postagem> post;
+            using (var context = new MuzokContext())
+            {
+                post = context.Postagem.Where(p => p.IdUser == id).ToList();
+            }
+
+            return post;
+        }
+
+        //public IEnumerable<Compost> BuscarComposto()
+        //{
+        //    IEnumerable<Compost> comp;
+        //    using (var context = new MuzokContext())
+        //    {
+        //        var composto = context.Usuario
+        //        .Join(context.Postagem, usuario => usuario.IdUser, postagem => postagem.IdUser, (usuario, postagem) => new { usuario, postagem })
+        //        .Select(x => new
+        //        {
+        //            x.postagem.IdPostagem,
+        //            x.postagem.IdUser,
+        //            x.usuario.Nome,
+        //            x.postagem.Conteudo,
+        //            x.postagem.Data,
+        //            x.postagem.Curtidas
+        //        }).ToList();
+
+        //        comp = composto;
+
+        //        return comp;
+        //    }
+        //}
 
         public void InserirPostagem(Postagem post)
         {

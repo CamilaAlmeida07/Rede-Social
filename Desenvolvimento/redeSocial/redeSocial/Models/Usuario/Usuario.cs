@@ -26,5 +26,7 @@ namespace redeSocial.Models.Usuario
         public virtual ICollection<Ranking.Ranking> Ranking { get; set; }
         public virtual ICollection<Inscricao.Inscricao> Inscricao { get; set; }
 
+
+        public object IdCriador { get; set; }
     }
 }

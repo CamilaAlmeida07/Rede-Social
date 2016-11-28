@@ -1,4 +1,5 @@
-﻿using System;
+﻿using redeSocial.Models.Inscricao;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,9 +12,14 @@ namespace redeSocial.Controllers
         //
         // GET: /Inscricao/
 
-        public ActionResult Index()
+        public ActionResult Inscricao()
         {
-            return View();
+            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+
+            var inscricaoDao = new InscricaoDao();
+            var inscricao = inscricaoDao.BuscarTodasInscricoes();//carrega objeto com dados da classe
+
+            return View(inscricao);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.            
         }
 
     }

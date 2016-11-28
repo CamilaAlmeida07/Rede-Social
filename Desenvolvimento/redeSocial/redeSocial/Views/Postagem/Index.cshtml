@@ -1,30 +1,53 @@
 ﻿@model IEnumerable<redeSocial.Models.Postagem.Postagem>
+@*@model  redeSocial.Models.ViewModel*@
 
 @{
     ViewBag.Title = "Feed";
+
+    //redeSocial.Models.Usuario.UsuarioDao Usuario = Model.Usuario;
+    //redeSocial.Models.Postagem.PostagemDao Postagem = Model.Postagem;
 }
 
-<input type="submit" name="btnSubmit" value="Criar" onclick='location.href="<%:Url.Action(\"Index\", \"Home\") %>"'/>
+@*<input type="submit" name="btnSubmit" value="Novo post" onclick='location.href="<%:Url.Action(\"Index\", \"Postagem\") %>"'/>*@
 
 
 <div id='operacoesFeed'>
-	<div id='newPost'><span>Novo Post</span></div>
-	<div ><span>Novo Post</span></div>
-	<div ></div>
+
+   <input type="text" id="Teste">
+	<div id='newPost' onclick="NovaPostagem(7)"><span>Novo</span></div>
+	
 	<!-- <div id='busca'><input type='text' placeholder='Buscar'></div> -->
 </div>
 
 <div id="conteudoFeed">
     
-@foreach(var item in Model){
-    <div class='post'>
-	    <img class='user'>
-	    <div class='postagem'>
-		    <iframe width="560" height="315" src="@item.Conteudo" frameborder="0" allowfullscreen></iframe>
-		    <div class='avaliacao' title='Afinado'></div>
-	    </div>
-    </div>
-}
+     @*@Html.LabelFor(m => m.Usuario.Nome)
+     @Html.DisplayFor(m => m.Usuario.Nome)*@
+       
+    @foreach (var item in Model)
+    {
+        <div class='post'>
+	        <img class='user'><span>@item.IdUser</span><br>
+	        <div class='postagem'>
+		        <iframe width="560" height="315" src="@item.Conteudo" frameborder="0" allowfullscreen></iframe>
+		        <div class='avaliacao' title='Afinado'></div>Afinação: @item.Curtidas
+	        </div>
+        </div>
+    }
+
+
+    @*@foreach(var item in Model){
+        <div class='post'>
+	        <img class='user'><span>@item.Usuario.</span><br>
+	        <div class='postagem'>
+		        <iframe width="560" height="315" src="@item.Postagem.Conteudo" frameborder="0" allowfullscreen></iframe>
+		        <div class='avaliacao' title='Afinado'></div>Afinação: @item.Postagem.Curtidas
+	        </div>
+        </div>
+    }*@
+
+
+
 
 @*<div class='post'>
 	<img class='user'>
