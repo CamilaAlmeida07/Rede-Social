@@ -8,15 +8,16 @@ namespace redeSocial.Models.Postagem
 {
     public class Postagem
     {
-        [Key]
+        //CODE FIRST - 
+        [Key]//CHAVE PRIMARIA
         public int IdPostagem { get; set; }
-        [Required]
+        [Required]//NOT NULL
         public int IdUser { get; set; }
         [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]//SÓ DATE, SEM O TIME
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]//FORMATO DD/MM/AAAA
         public DateTime Data { get; set; }
-        [Required]
+        [Required]//NOT NULL
         public int Curtidas { get; set; }
         [Required]
         public string Conteudo { get; set; }

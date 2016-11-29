@@ -6,7 +6,7 @@
 		text-align: left;
 	}
 		#operacoesFeed div{
-			margin: 1%;
+            margin: 1%;
 			margin-left: 0;
 			margin-top: 0;
 			display: inline-block;
@@ -29,9 +29,11 @@
 			box-shadow: none;
    			background-color: CadetBlue;
 		}
-			#operacoesFeed div span{
+			#operacoesFeed div a{
 				top:9px;
 				position: relative;
+                color:white;
+                text-decoration: none;
 			}
 
     #conteudoFeed {

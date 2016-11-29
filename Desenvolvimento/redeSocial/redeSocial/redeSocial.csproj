@@ -325,6 +325,8 @@
     <Content Include="Views\Conquista\Conquista.cshtml" />
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Usuario\CreateUser.cshtml" />
+    <Content Include="Views\Duelo\InserirDuelo.cshtml" />
+    <Content Include="Views\Postagem\InserirPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

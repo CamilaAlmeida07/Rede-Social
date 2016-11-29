@@ -7,16 +7,19 @@
 
 <div id='operacoesDuelos'>
         
+    @* PARA CADA OBJ DA MINHA MODEL, EU JOGO NO ITEM *@
     @foreach(var item in Model){
         
         var status  = "None";
 
-
+        // > 0, ENTAO 1º DATA É MAIOR
+        // < 0, ENTAO 2º DATA É MAIOR
+        // = 0, ENTAO SAO IGUAIS
         var compInicio = DateTime.Compare(@DateTime.Today, @item.Inicio);
         var compTermino = DateTime.Compare(@DateTime.Today, @item.Termino);
         
         if(@compInicio < 0){
-            status = "Incrições";                    
+            status = "Inscrições";                    
         }
         else if (@compTermino > 0)
         {

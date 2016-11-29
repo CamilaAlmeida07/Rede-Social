@@ -23,5 +23,14 @@ namespace redeSocial.Controllers
             
         }
 
+        [HttpPost]
+        public ActionResult InserirRanking(Ranking rank) 
+        {
+            RankingDao rankDao = new RankingDao();
+            rankDao.InserirRanking(rank);
+
+            return RedirectToAction("Ranking");
+        }
+
     }
 }

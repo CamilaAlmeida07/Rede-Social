@@ -19,9 +19,19 @@ namespace redeSocial
                 defaults: new { controller = "Postagem", action = "Index", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+                name: "InserirPost",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Postagem", action = "InserirPost", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
                 name: "Duelo",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Duelo", action = "Duelo", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "InserirDuelo",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Duelo", action = "InserirDuelo", id = UrlParameter.Optional }
             );
             routes.MapRoute(
                 name: "Ranking",

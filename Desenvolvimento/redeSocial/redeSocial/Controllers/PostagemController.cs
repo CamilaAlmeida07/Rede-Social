@@ -11,18 +11,44 @@ namespace redeSocial.Controllers
 {
     public class PostagemController : Controller
     {
-        public ActionResult Index(string submit)
+        public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
+            //INSTANCIA DA CLASSE DAO - GERENCIA A TABELA POSTAGEM
             var postDao = new PostagemDao();
+
             var post = postDao.BuscarTodasPostagens();//carrega objeto com dados da classe
 
             return View(post);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.
         }
 
+        public ActionResult InserirPost()
+        {
+            return View();
+        }
+
         [HttpPost]
-       
+        public ActionResult InserirPost(Postagem post)
+        {
+            post.IdUser = 1;
+            post.Curtidas = 0;
+            post.Data = DateTime.Today.Date;
+            
+            PostagemDao postDao = new PostagemDao();
+            postDao.InserirPostagem(post);      
+           
+            return RedirectToAction("Index");
+        }
+
+        //public string nomeUsuario(int idUser)
+        //{
+        //    UsuarioDao usuDao = new UsuarioDao();
+        //    IEnumerable<Usuario> usu;
+        //    usu = usuDao.BuscarPorId(idUser);
+        //    return ;
+        //}
+               
 
         //public ActionResult Index()
         //{
@@ -38,24 +64,6 @@ namespace redeSocial.Controllers
 
         //    return View(viewModel);
         //}
-
-        
-        [HttpPost]
-        public ActionResult Novo()
-        {
-            ViewData["btnSubmit"] = "TESTE";
-            return View("Index");
-
-        }
-
-        [HttpPost]
-        public ActionResult CreatePost(Postagem post)
-        {
-            PostagemDao postDao = new PostagemDao();
-            postDao.InserirPostagem(post);
-
-            return RedirectToAction("Index");//return pra onde eu precisar
-        }
 
 
     }

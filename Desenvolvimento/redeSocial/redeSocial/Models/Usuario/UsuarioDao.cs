@@ -21,18 +21,18 @@ namespace redeSocial.Models.Usuario
             return usuario;
         }
 
-        public IEnumerable<Usuario> BuscarPorId(int id)
-        {
-            IEnumerable<Usuario> usuario;
-            using (var context = new MuzokContext())
-            {
-                usuario = context.Usuario.Where(p => p.IdUser == id).ToList();
-            }
-            //var conexao = new MuzokContext(); //chamando conexao
-            //return conexao.Usuarios.ToList();//retorna em lista
-            //TO LIST É O QUE FAZ DE FATO A CONSULTA
-            return usuario;
-        }
+        //public IEnumerable<Usuario> BuscarPorId(int id)
+        //{
+        //    IEnumerable<Usuario> usuario;
+        //    using (var context = new MuzokContext())
+        //    {
+        //        usuario = context.Usuario.Where(p => p.IdUser == id).ToList();
+        //    }
+        //    //var conexao = new MuzokContext(); //chamando conexao
+        //    //return conexao.Usuarios.ToList();//retorna em lista
+        //    //TO LIST É O QUE FAZ DE FATO A CONSULTA
+        //    return usuario;
+        //}
 
         public void InserirUsuario(Usuario usuario) { 
             //esta inserindo no banco

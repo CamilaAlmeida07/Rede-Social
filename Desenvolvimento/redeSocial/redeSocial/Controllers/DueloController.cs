@@ -24,17 +24,24 @@ namespace redeSocial.Controllers
             //                select u);
             //return View(meuDuelo.ToList());
 
-            return View(duelo);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.
+            return View(duelo);
             
         }
 
+        //ESSE CHAMA A VIEW DO INSERIR DUELO
+        public ActionResult InserirDuelo()
+        {
+            return View();
+        }
+
+        //INSERINDO NO BANCO
         [HttpPost]
-        public ActionResult CreatePost(Duelo duelo)
+        public ActionResult InserirDuelo(Duelo duelo)
         {
             DueloDao dueloDao = new DueloDao();
             dueloDao.InserirDuelo(duelo);
 
-            return RedirectToAction("Index");//return pra onde eu precisar
+            return RedirectToAction("Duelo");//return pra onde eu precisar
         }
 
     }

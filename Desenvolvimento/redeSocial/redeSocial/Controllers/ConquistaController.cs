@@ -20,5 +20,14 @@ namespace redeSocial.Controllers
             return View(conquista);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.            
         }
 
+        [HttpPost]
+        public ActionResult InserirConquista(Conquista conquista)
+        {
+            ConquistaDao conquistaDao = new ConquistaDao();
+            conquistaDao.InserirConquista(conquista);
+
+            return RedirectToAction("Conquista");
+        }
+
     }
 }

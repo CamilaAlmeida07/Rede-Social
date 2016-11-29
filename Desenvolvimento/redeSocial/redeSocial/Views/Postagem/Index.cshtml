@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<redeSocial.Models.Postagem.Postagem>
+
 @*@model  redeSocial.Models.ViewModel*@
 
 @{
@@ -12,11 +13,7 @@
 
 
 <div id='operacoesFeed'>
-
-   <input type="text" id="Teste">
-	<div id='newPost' onclick="NovaPostagem(7)"><span>Novo</span></div>
-	
-	<!-- <div id='busca'><input type='text' placeholder='Buscar'></div> -->
+   	<div id='newPost'>@Html.ActionLink("Novo","InserirPost","Postagem")</div>	
 </div>
 
 <div id="conteudoFeed">

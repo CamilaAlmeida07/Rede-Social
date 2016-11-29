@@ -22,5 +22,14 @@ namespace redeSocial.Controllers
             return View(inscricao);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.            
         }
 
+        [HttpPost]
+        public ActionResult InserirInscricao(Inscricao insc)
+        {
+            InscricaoDao inscDao = new InscricaoDao();
+            inscDao.InserirInscricao(insc);
+
+            return RedirectToAction("Inscricao");
+        }
+
     }
 }

@@ -7,13 +7,16 @@ namespace redeSocial.Models.Postagem
 {
     public class PostagemDao
     {
-
+        //RETORNA OBJ DO TIPO POSTAGEM
         public IEnumerable<Postagem> BuscarTodasPostagens()
         {
+            //INSTANCIA DO OBJETO, COM APELIDO POST
             IEnumerable<Postagem> post;
+
+            //ESTOU USANDO O CONTEXTO XPTO
             using (var context = new MuzokContext())
             {
-                post = context.Postagem.ToList();
+                post = context.Postagem.OrderByDescending(p => p.Data).ToList();
             }
             
             return post;
@@ -24,7 +27,7 @@ namespace redeSocial.Models.Postagem
             IEnumerable<Postagem> post;
             using (var context = new MuzokContext())
             {
-                post = context.Postagem.Where(p => p.IdUser == id).ToList();
+                post = context.Postagem.Where(p => p.IdUser == id).OrderByDescending(p => p.Data).ToList();
             }
 
             return post;
