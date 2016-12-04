@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<redeSocial.Models.Duelo.Duelo>
 
-
 @{
     ViewBag.Title = "Duelos";
 }
 
-<div id='operacoesDuelos'>
+<div id='operacoesDuelo'>
+   	<div id='newPost'>@Html.ActionLink("Criar Duelo","InserirDuelo","Duelo")</div>	
+</div>
+
+<div id='conteudoDuelos' class="teste">
         
     @* PARA CADA OBJ DA MINHA MODEL, EU JOGO NO ITEM *@
     @foreach(var item in Model){
@@ -33,9 +36,19 @@
         <div class='duelo'>
             <span>@item.IdDuelo - Duelo de @item.Tipo <br><br> 
                 Criador: @item.IdCriador<br>
-                Status: @status
+                Status: @status<br><br>
+               
+                @if(status == "Inscrições"){
+                    <div class="botaoVisualizar">@Html.ActionLink("Inscrever-me", "VerInscricaoDuelo", "Inscricao", new { id = @item.IdDuelo }, null)</div>
+                }
+                else if (status == "Votação"){
+                    <div class="botaoVisualizar">@Html.ActionLink("Votar", "ViewVotarDuelo", "Inscricao", new { id = @item.IdDuelo }, null)</div>
+                }
+                else{
+                    <div class="botaoVisualizar">@Html.ActionLink("Resultado", "VerInscricaoDuelo", "Inscricao", new { id = @item.IdDuelo }, null)</div>
+                }
+                 
             </span>
-            
         </div>
     }
 

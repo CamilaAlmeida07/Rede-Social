@@ -43,6 +43,16 @@ namespace redeSocial.Controllers
 
             return RedirectToAction("Duelo");//return pra onde eu precisar
         }
+               
+        
+        public ActionResult VerDuelo(int id)
+        {
+            DueloDao dueloDao = new DueloDao();
+            var inscricao = dueloDao.BuscarInscricaoPorDuelo(id);
+
+            return View(inscricao);
+        }
+
 
     }
 }

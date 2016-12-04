@@ -17,7 +17,6 @@ namespace redeSocial.Controllers
 
             //INSTANCIA DA CLASSE DAO - GERENCIA A TABELA POSTAGEM
             var postDao = new PostagemDao();
-
             var post = postDao.BuscarTodasPostagens();//carrega objeto com dados da classe
 
             return View(post);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.
@@ -40,6 +39,32 @@ namespace redeSocial.Controllers
            
             return RedirectToAction("Index");
         }
+
+
+        public ActionResult CurtirPost(int id)
+        {  
+            PostagemDao pDao = new PostagemDao();
+            pDao.IncrementarCurtidas(id);
+
+            return RedirectToAction("Index");
+        }
+
+        //[HttpPost]
+        //public ActionResult CurtirPost(Postagem post)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        post.Curtidas++;
+
+        //        PostagemDao postDao = new PostagemDao();
+        //        postDao.IncrementarCurtidas(post);            
+        //    }
+
+        //    return RedirectToAction("Index");
+        //}
+
+  
+        
 
         //public string nomeUsuario(int idUser)
         //{

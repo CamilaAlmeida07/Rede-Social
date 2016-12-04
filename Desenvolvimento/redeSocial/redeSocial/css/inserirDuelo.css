@@ -1,0 +1,30 @@
+
+
+h2 {
+    color: black;
+}
+
+input {
+    border-radius:5px;
+    border:none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.32);
+    height:25px;
+}
+
+#inserirDuelo {
+    position:relative;
+    border:none;
+    text-align:center;   
+    width: 30%;
+    left:calc(35% - 15px);
+
+    background-color:  #00625F ;
+    border-radius: 15px;
+}
+
+.editor-label {
+    margin-bottom:3px;
+}
+.editor-field {
+    margin-bottom:10px;
+}

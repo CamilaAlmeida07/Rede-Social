@@ -20,10 +20,7 @@ namespace redeSocial.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); //evita q gera nomes no plural
-            
         }
     }
 }

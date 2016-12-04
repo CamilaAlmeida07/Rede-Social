@@ -18,6 +18,18 @@ namespace redeSocial.Models.Inscricao
             return inscricao;
         }
 
+        public IEnumerable<Inscricao> BuscarInscricaoPorDuelo(int id)
+        {
+            IEnumerable<Inscricao> inscricao;
+
+            using (var context = new MuzokContext())
+            {
+                inscricao = context.Inscricao.Where(p => p.IdDuelo == id).ToList();
+            }
+
+            return inscricao;
+        }
+
         public void InserirInscricao(Inscricao inscricao)
         {
             //esta inserindo no banco
@@ -26,6 +38,17 @@ namespace redeSocial.Models.Inscricao
             {
                 context.Inscricao.Add(inscricao);//add
                 context.SaveChanges();//commit
+            }
+        }
+
+
+        internal void IncrementarPontuacao(int id)
+        {
+            using (var context = new MuzokContext())
+            {
+                var inscricao = context.Inscricao.SingleOrDefault(p => p.IdInscricao == id);
+                inscricao.Pontuacao++;
+                context.SaveChanges();
             }
         }
     }

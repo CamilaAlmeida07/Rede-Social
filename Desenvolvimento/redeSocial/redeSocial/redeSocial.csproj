@@ -195,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\conquistas.css" />
+    <Content Include="css\VerInscricaoDuelo.css" />
+    <Content Include="css\inserirDuelo.css" />
+    <Content Include="css\inserirPost.css" />
     <Content Include="css\feed.css" />
     <Content Include="css\duelos.css" />
     <Content Include="css\login.css" />
@@ -325,8 +328,10 @@
     <Content Include="Views\Conquista\Conquista.cshtml" />
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Usuario\CreateUser.cshtml" />
-    <Content Include="Views\Duelo\InserirDuelo.cshtml" />
     <Content Include="Views\Postagem\InserirPost.cshtml" />
+    <Content Include="Views\Duelo\InserirDuelo.cshtml" />
+    <Content Include="Views\Inscricao\VerInscricaoDuelo.cshtml" />
+    <None Include="Views\Inscricao\ViewVotarDuelo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

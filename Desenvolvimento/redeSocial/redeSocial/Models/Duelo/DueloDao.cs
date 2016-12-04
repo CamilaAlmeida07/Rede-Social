@@ -19,6 +19,16 @@ namespace redeSocial.Models.Duelo
             return duelo;
         }
 
+        public IEnumerable<Duelo> BuscarDueloPorId(int idDuelo)
+        {
+            IEnumerable<Duelo> duelo;
+            using (var context = new MuzokContext()) //chamando conexao
+            {
+                duelo = context.Duelo.Where(p => p.IdDuelo == idDuelo).ToList(); //Consulta (tolist) e passa para o objeto duelo
+            }
+            return duelo;
+        }
+
         //public IEnumerable<Duelo> BuscarDuelosUsuario()
         //{
         //    IEnumerable<Duelo> duelo;
@@ -46,6 +56,12 @@ namespace redeSocial.Models.Duelo
                 context.Duelo.Add(duelo);//add
                 context.SaveChanges();//commit
             }
+        }
+
+
+        internal object BuscarInscricaoPorDuelo(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

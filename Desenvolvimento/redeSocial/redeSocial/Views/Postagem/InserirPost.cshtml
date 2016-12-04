@@ -5,40 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>InserirPost</h2>
+<h2>Nova Postagem</h2>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Postagem</legend>
-
-@*        <div class="editor-label">
-            @Html.LabelFor(model => model.IdUser)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.IdUser)
-            @Html.ValidationMessageFor(model => model.IdUser)
-        </div>*@
-
-        @*<div class="editor-label">
-            @Html.LabelFor(model => model.Data)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Data)
-            @Html.ValidationMessageFor(model => model.Data)
-        </div>*@
-
-@*        <div class="editor-label">
-            @Html.LabelFor(model => model.Curtidas)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Curtidas)
-            @Html.ValidationMessageFor(model => model.Curtidas)
-        </div>*@
-
+    <fieldset id="inserirPost">
+        
         <div class="editor-label">
-            @Html.LabelFor(model => model.Conteudo)
+           Insira o link do vídeo ou aúdio
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Conteudo)
@@ -46,14 +21,12 @@
         </div>
 
         <p>
-            <input name="btnSubmit" type="submit" value="InserirPost" />
+            <input class="botaoInserir" name="btnInserirPost" type="submit" value="Postar" />
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @*@section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

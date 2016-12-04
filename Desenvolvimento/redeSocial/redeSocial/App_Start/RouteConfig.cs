@@ -24,6 +24,12 @@ namespace redeSocial
                 defaults: new { controller = "Postagem", action = "InserirPost", id = UrlParameter.Optional }
             );
             routes.MapRoute(
+                name: "CurtirPost",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Postagem", action = "CurtirPost", id = UrlParameter.Optional }
+            );
+    
+            routes.MapRoute(
                 name: "Duelo",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Duelo", action = "Duelo", id = UrlParameter.Optional }
@@ -32,6 +38,26 @@ namespace redeSocial
                 name: "InserirDuelo",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Duelo", action = "InserirDuelo", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "VerDuelo",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Duelo", action = "VerDuelo", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "VerInscricaoDuelo",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Inscricao", action = "VerInscricaoDuelo", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "VotarDuelo",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Inscricao", action = "VotarDuelo", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "ViewVotarDuelo",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Inscricao", action = "ViewVotarDuelo", id = UrlParameter.Optional }
             );
             routes.MapRoute(
                 name: "Ranking",

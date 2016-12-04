@@ -31,5 +31,32 @@ namespace redeSocial.Controllers
             return RedirectToAction("Inscricao");
         }
 
+
+        public ActionResult VerInscricaoDuelo(int id)
+        {
+            InscricaoDao inscDao = new InscricaoDao();
+            var inscricao = inscDao.BuscarInscricaoPorDuelo(id);
+
+            return View(inscricao);
+        }
+
+
+        public ActionResult ViewVotarDuelo(int id)
+        {
+            InscricaoDao inscDao = new InscricaoDao();
+            var inscricao = inscDao.BuscarInscricaoPorDuelo(id);
+
+            return View(inscricao);
+        }
+
+        public ActionResult VotarDuelo(int id)
+        {
+            InscricaoDao iDao = new InscricaoDao();
+            iDao.IncrementarPontuacao(id);
+
+            //CHAMA OUTRO METODO
+            return RedirectToAction("Duelo", "Duelo");
+        }
+
     }
 }

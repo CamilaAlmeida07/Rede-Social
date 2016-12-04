@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -16,9 +17,20 @@ namespace redeSocial.Models.Postagem
             //ESTOU USANDO O CONTEXTO XPTO
             using (var context = new MuzokContext())
             {
-                post = context.Postagem.OrderByDescending(p => p.Data).ToList();
+                post = context.Postagem.OrderByDescending(p => p.IdPostagem).ToList();
             }
             
+            return post;
+        }
+
+        public IEnumerable<Postagem> BuscarPorPostagem(int idPost)
+        {
+            IEnumerable<Postagem> post;
+            using (var context = new MuzokContext())
+            {
+                post = context.Postagem.Where(p => p.IdPostagem == idPost).ToList();
+            }
+
             return post;
         }
 
@@ -58,13 +70,30 @@ namespace redeSocial.Models.Postagem
 
         public void InserirPostagem(Postagem post)
         {
-            //esta inserindo no banco
-
             using (var context = new MuzokContext())
             {
                 context.Postagem.Add(post);//add
                 context.SaveChanges();//commit
             }
         }
+
+       
+        internal void IncrementarCurtidas(int id)
+        {
+            
+           
+            using (var context = new MuzokContext())
+            {
+                var curtidas = context.Postagem.SingleOrDefault(p => p.IdPostagem == id);
+                curtidas.Curtidas++;
+                context.SaveChanges();                
+                //context.Postagem.Attach(post);
+                //context.Entry(post).Property(x => x.IdPostagem).IsModified = true;
+                //context.Entry(post).State = EntityState.Modified;
+                
+            }
+        }
+
+        
     }
 }

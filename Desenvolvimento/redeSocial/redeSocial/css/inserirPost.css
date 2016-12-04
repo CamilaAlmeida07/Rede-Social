@@ -1,0 +1,20 @@
+#inserirPost {
+    position:relative;
+    border:none;
+    text-align:center;   
+    width: 30%;
+    left:calc(35% - 15px);
+    height:100px;
+    background-color:  #00625F ;
+    border-radius: 15px;
+}
+
+    #inserirPost input[type='text'] {
+        width: 300px; 
+    }
+
+.botaoInserir {
+    border: 1px solid white;
+    color:white;
+    width: 70px;
+}

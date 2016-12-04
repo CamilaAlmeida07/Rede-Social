@@ -1,4 +1,7 @@
-#operacoesDuelos{			
+
+
+
+#conteudoDuelos{			
 	margin: 1%;
 	margin-bottom: 0;
 	position:relative;		
@@ -6,7 +9,7 @@
 
     height:100%;
 }
-	#operacoesDuelos div{
+	#conteudoDuelos div{
 		margin: 2%;
 		margin-left: 0;
 		margin-top: 0;
@@ -28,12 +31,25 @@
 		vertical-align: text-bottom;
    		transition: all 1s, color .70s;
 	}
-	#operacoesDuelos div:hover{
+	#conteudoDuelos div:hover{
 		box-shadow: none;
    		background-color: CadetBlue;
 	}
-		#operacoesDuelos div span{
+		#conteudoDuelos div span{
 			top:9px;
 			position: relative;
 		}
+
+        #conteudoDuelos div span .botaoVisualizar{
+			min-width:30px;
+            min-height: 10px;
+            border:1px solid white;
+		}
+            #conteudoDuelos div span .botaoVisualizar > a {
+                text-decoration:none;
+                color:white;
+            }
+
+
+
 

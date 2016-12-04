@@ -24,7 +24,7 @@ namespace redeSocial.Models.Duelo
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Termino { get; set; }
 
-
+        //SETAR AS MINHA KEY COMO CHAVE ESTRANGEIRA NO MODELO INSCRIÇÃO
         public virtual ICollection<Inscricao.Inscricao> Inscricao { get; set; } //nomes da tabela com relação
     }
 

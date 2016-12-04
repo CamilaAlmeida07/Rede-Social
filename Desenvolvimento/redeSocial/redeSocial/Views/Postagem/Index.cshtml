@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<redeSocial.Models.Postagem.Postagem>
-
 @*@model  redeSocial.Models.ViewModel*@
 
 @{
@@ -9,27 +8,33 @@
     //redeSocial.Models.Postagem.PostagemDao Postagem = Model.Postagem;
 }
 
-@*<input type="submit" name="btnSubmit" value="Novo post" onclick='location.href="<%:Url.Action(\"Index\", \"Postagem\") %>"'/>*@
-
-
 <div id='operacoesFeed'>
    	<div id='newPost'>@Html.ActionLink("Novo","InserirPost","Postagem")</div>	
 </div>
 
 <div id="conteudoFeed">
-    
-     @*@Html.LabelFor(m => m.Usuario.Nome)
-     @Html.DisplayFor(m => m.Usuario.Nome)*@
-       
-    @foreach (var item in Model)
-    {
-        <div class='post'>
-	        <img class='user'><span>@item.IdUser</span><br>
-	        <div class='postagem'>
-		        <iframe width="560" height="315" src="@item.Conteudo" frameborder="0" allowfullscreen></iframe>
-		        <div class='avaliacao' title='Afinado'></div>Afinação: @item.Curtidas
-	        </div>
-        </div>
+           
+        @foreach (var item in Model)
+        {  
+            
+               @* @Html.DisplayFor(model => item.IdPostagem)<br>
+                @Html.DisplayFor(model => item.IdUser)<br>
+                @Html.DisplayFor(model => item.Conteudo)<br>
+                @Html.DisplayFor(model => item.Data)<br>
+                @Html.DisplayFor(model => item.Curtidas)<br>*@
+            
+            <div class='post'>
+	            <img class='user'><span>Postado por @item.IdUser em @item.Data.Day/@item.Data.Month/@item.Data.Year</span><br>
+	            <div class='postagem'>
+		            <iframe width="560" height="315"  src="@item.Conteudo" frameborder="0" allowfullscreen></iframe><br>		        
+                    <div  class='avaliacao' title='Afinado'></div>
+                    <p>@Html.ActionLink("Afinado", "CurtirPost", "Postagem", new { id = item.IdPostagem }, null )  @item.Curtidas</p>
+                    
+                    @*<button type="submit" name="botao1" id="botao1">Curtir</button>*@
+                      
+                </div>
+            </div>
+        }
     }
 
 

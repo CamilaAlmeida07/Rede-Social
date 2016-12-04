@@ -1,0 +1,26 @@
+﻿@model IEnumerable<redeSocial.Models.Inscricao.Inscricao>
+
+@{
+    ViewBag.Title = "Votar";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Inscritos no Duelo</h2>
+
+<fieldset id="votarDuelo">
+
+     @foreach(var item in Model){
+    
+        <div class="itemDuelo">
+            <br>
+            <span>Competidor: @Html.DisplayFor(model => item.IdUser)</span><br><br>  
+            <span>Data da Inscrição: @Html.DisplayFor(model => item.Data)</span><br><br>       
+            <span>Pontuação: @Html.DisplayFor(model => item.Pontuacao)</span><br><br>
+            <br>
+            <br>
+            <div id="btnVotar" class="botaoVisualizar">@Html.ActionLink("Votar", "VotarDuelo", "Inscricao", new { id = item.IdInscricao }, null ) </div>
+
+        </div>
+     }
+</fieldset>
+

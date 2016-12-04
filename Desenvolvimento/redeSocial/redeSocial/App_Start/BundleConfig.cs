@@ -31,6 +31,9 @@ namespace redeSocial
                                                                 "~/css/paginas.css",
                                                                 "~/css/login.css",
                                                                 "~/css/feed.css",
+                                                                "~/css/inserirPost.css",
+                                                                "~/css/inserirDuelo.css",
+                                                                "~/css/VerInscricaoDuelo.css",
                                                                 "~/css/duelos.css"
                                                             ));
 

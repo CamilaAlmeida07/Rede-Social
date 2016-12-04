@@ -5,4 +5,47 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>InserirDuelo</h2>
+<h2>Novo Duelo</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset id="inserirDuelo">
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IdCriador)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IdCriador)
+            @Html.ValidationMessageFor(model => model.IdCriador)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tipo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tipo)
+            @Html.ValidationMessageFor(model => model.Tipo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Inicio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Inicio)
+            @Html.ValidationMessageFor(model => model.Inicio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Termino)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Termino)
+            @Html.ValidationMessageFor(model => model.Termino)
+        </div>
+
+        <p>
+            <input class='botaoInserir' type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
