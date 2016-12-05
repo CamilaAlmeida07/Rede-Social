@@ -56,7 +56,7 @@ namespace redeSocial.Controllers
         [HttpPost]
         public ActionResult InserirPost(Postagem post)
         {
-            post.IdUser = 1;
+            post.IdUser = 1;//Convert.ToInt32(Session["IdUser"].ToString());
             post.Curtidas = 0;
             post.Data = DateTime.Today.Date;
             

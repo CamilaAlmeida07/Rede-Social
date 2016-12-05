@@ -54,6 +54,13 @@ namespace redeSocial.Models.Usuario
             }
         }
 
-        
+        public Usuario Login(Usuario usuario)
+        {
+            using (var context = new MuzokContext())
+            {
+                Usuario user = context.Usuario.Where(u => u.Email == usuario.Email && u.Senha == usuario.Senha).FirstOrDefault();
+                return user;
+            }
+        }        
     }
 }
