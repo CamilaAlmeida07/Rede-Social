@@ -18,13 +18,15 @@ namespace redeSocial.Models.Usuario
         public string Tipo { get; set; }
         [Required]
         public string Nome { get; set; }
+        [Required]
+        public string Foto { get; set; }
 
 
         //ENTIDADES QUE RECEBERAO O IDUSER COMO FK
         public virtual ICollection<Postagem.Postagem> Postagem { get; set; }
-        //public virtual ICollection<Duelo.Duelo> Duelo { get; set; }
         public virtual ICollection<Ranking.Ranking> Ranking { get; set; }
         public virtual ICollection<Inscricao.Inscricao> Inscricao { get; set; }
+        public virtual ICollection<Votos.Votos> Votos { get; set; }
 
 
         public object IdCriador { get; set; }

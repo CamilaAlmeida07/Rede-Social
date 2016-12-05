@@ -51,9 +51,8 @@
 		background: #FBF7F7;
 	}
 		#conteudoFeed .user{
-			background-image: url('../img/perfil.png');
 			background-position:center;
-	 	    background-size: 145%;
+	 	    background-size: 110%;
 			height:50px;
 			width:50px;
 			margin:5px;

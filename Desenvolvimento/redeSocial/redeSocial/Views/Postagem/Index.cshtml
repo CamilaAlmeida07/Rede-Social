@@ -9,11 +9,14 @@
 }
 
 <div id='operacoesFeed'>
-   	<div id='newPost'>@Html.ActionLink("Novo","InserirPost","Postagem")</div>	
+   	<div id='newPost'>@Html.ActionLink("Novo","InserirPost","Postagem")</div>
+  
 </div>
 
+
+
 <div id="conteudoFeed">
-           
+        @{int i = 0;}
         @foreach (var item in Model)
         {  
             
@@ -24,18 +27,17 @@
                 @Html.DisplayFor(model => item.Curtidas)<br>*@
             
             <div class='post'>
-	            <img class='user'><span>Postado por @item.IdUser em @item.Data.Day/@item.Data.Month/@item.Data.Year</span><br>
+	            <img class='user'  style="background-image:url('@Html.Raw(ViewBag.UsuFoto[i])')" ><span>Postado por @Html.Raw(ViewBag.UsuNome[i]) em @item.Data.Day/@item.Data.Month/@item.Data.Year</span><br>
 	            <div class='postagem'>
 		            <iframe width="560" height="315"  src="@item.Conteudo" frameborder="0" allowfullscreen></iframe><br>		        
                     <div  class='avaliacao' title='Afinado'></div>
                     <p>@Html.ActionLink("Afinado", "CurtirPost", "Postagem", new { id = item.IdPostagem }, null )  @item.Curtidas</p>
-                    
                     @*<button type="submit" name="botao1" id="botao1">Curtir</button>*@
-                      
+                    @{i = i + 1;}
                 </div>
             </div>
         }
-    }
+    
 
 
     @*@foreach(var item in Model){

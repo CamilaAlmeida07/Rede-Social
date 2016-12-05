@@ -176,8 +176,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Amizade\Amizade.cs" />
     <Compile Include="Models\Conquista\Conquista.cs" />
     <Compile Include="Models\Conquista\ConquistaDao.cs" />
+    <Compile Include="Models\Curtida\Curtida.cs" />
     <Compile Include="Models\Duelo\Duelo.cs" />
     <Compile Include="Models\Duelo\DueloDao.cs" />
     <Compile Include="Models\Inscricao\Inscricao.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Models\Ranking\RankingDao.cs" />
     <Compile Include="Models\Usuario\Usuario.cs" />
     <Compile Include="Models\Usuario\UsuarioDao.cs" />
+    <Compile Include="Models\Votos\Votos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

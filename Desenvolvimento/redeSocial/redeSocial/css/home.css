@@ -135,31 +135,6 @@ nav li>a {
 }
 
 
-	/*#busca{
-		height:100%;
-		width: calc(100% - 220px);
-		float: right;
-	}
-	#busca>input{
-		height:25px;
-		width:250px;
-		top:22px;
-		position:relative;
-		border:none;
-		border-bottom:2px solid #79BBAE;
-		background: #2F4F4F;	
-		margin-left:50px;
-		padding-left:5px;
-		
-		transition: border-bottom 1s;
-		color:white;
-	}
-	#busca>input:focus{
-		border:none;
-		border-bottom:2px solid white;
-		outline: 0;
-	}*/
-
 #conteudo{
 	overflow: hidden;
 	background-color:#F4F1F1;
@@ -171,14 +146,3 @@ nav li>a {
 }
 
 
-
-
-
-
-
-
-
-
-
-	
-	

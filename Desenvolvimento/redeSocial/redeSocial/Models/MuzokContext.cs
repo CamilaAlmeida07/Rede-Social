@@ -15,7 +15,10 @@ namespace redeSocial.Models
         public DbSet<Inscricao.Inscricao> Inscricao { get; set; }
         public DbSet<Postagem.Postagem> Postagem { get; set; }
         public DbSet<Usuario.Usuario> Usuario { get; set; }
-        public DbSet<Ranking.Ranking> Ranking { get; set; } 
+        public DbSet<Ranking.Ranking> Ranking { get; set; }
+        public DbSet<Amizade.Amizade> Amizade { get; set; }
+        public DbSet<Votos.Votos> Votos { get; set; }
+        public DbSet<Curtida.Curtida> Curtida { get; set; } 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

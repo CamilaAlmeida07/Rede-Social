@@ -15,9 +15,35 @@ namespace redeSocial.Controllers
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
+           
+
             //INSTANCIA DA CLASSE DAO - GERENCIA A TABELA POSTAGEM
             var postDao = new PostagemDao();
             var post = postDao.BuscarTodasPostagens();//carrega objeto com dados da classe
+
+            //DECLARANDO ARRAY VAZIO
+            string[] nomeArray = new string[200];
+            string[] fotoArray = new string[200];
+          
+
+            int i = 0;
+            foreach (var item in post)
+            {
+                var usuDao = new UsuarioDao();
+                var usu = usuDao.BuscarUsuarioPorId(item.IdUser);//carrega objeto com dados da classe
+                
+                foreach(var reg in usu)
+                {
+                    nomeArray[i] = reg.Nome;
+                    fotoArray[i] = reg.Foto;
+                }
+                i++;
+            }
+            
+
+            //VIEWBAG RECEBE ARRAY
+            ViewBag.UsuNome = nomeArray;
+            ViewBag.UsuFoto = fotoArray;
 
             return View(post);//RETORNA O HTML.. POR CONVENÇÃO ELE JÁ BUSCA NA PASTA VIEWS HOME (HOMECONTROLLER) O ARQUIVO INDEX.
         }
